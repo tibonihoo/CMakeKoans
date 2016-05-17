@@ -1,0 +1,28 @@
+// Part of CMakeKoans (https://github.com/tibonihoo/CMakeKoans)
+
+#include <iostream>
+#include <fstream>
+
+
+int main(int argc, char* argv[])
+{
+	// Check correct invocation
+	if (argc != 3)
+	{
+		std::cerr  << "Invalid number of options" << std::endl;
+		std::cout << "Usage: " << argv[0] << " total_num_koans output_file" << std::endl;
+		return -1;
+	}
+
+	// Check the input file can be accessed
+	std::ofstream output(argv[2]);
+	if (!output.is_open())
+	{
+		std::cerr  << "Cannot open output file: " << argv[1] << std::endl;
+		std::cout << "Usage: " << argv[0] << " total_num_koans output_file" << std::endl;
+		return -2;
+	}
+
+	output << "Congratulation, you've completed the " << std::string(argv[1]) << " koans\n";
+	return 0;
+}
