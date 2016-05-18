@@ -18,7 +18,7 @@ add_custom_target(KoanWorkingDirectory
   ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/koans_build)
 
 add_custom_target(KoanProject
-  ${CMAKE_COMMAND} ${GENERATOR_OPTIONS} ${PROJECT_SOURCE_DIR}/koans
+  ${CMAKE_COMMAND} ${GENERATOR_OPTIONS} -DAPPRENTICE_NAME=YOU ${PROJECT_SOURCE_DIR}/koans
   WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/koans_build
   DEPENDS KoanWorkingDirectory)
 

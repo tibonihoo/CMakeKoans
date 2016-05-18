@@ -1,3 +1,12 @@
+option(APPRENTICE_NAME "Name of the apprentice walking the path of enlightenment" "YOU")
+
+koan_assert("Options are here to be set at CMake invocation."
+  "YOU" "${APPRENTICE_NAME}")
+
+set(APPRENTICE_NAME "KOHAI" CACHE STRING "A better value for the apprentice name" FORCE)
+koan_assert("Options can be forced with a little effort."
+  "KOHAI" "${APPRENTICE_NAME}")
+
 configure_file(
   "summarize_koans.cpp.in"
   "${PROJECT_BINARY_DIR}/summarize_koans.cpp"
