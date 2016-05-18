@@ -9,17 +9,17 @@ koan_assert("Variables set from sub-directories are not accessible by parents an
 
 function(change_flag_func)
   if(MY_FLAG)
-    set(MY_FLAG OFF PARENT_SCOPE) # remove parent scope
+    set(MY_FLAG OFF)
   else()
-    set(MY_FLAG ON PARENT_SCOPE)
+    set(MY_FLAG ON)
   endif()
 endfunction()
 
 macro(change_flag_mac)
   if(MY_FLAG)
-    set(MY_FLAG OFF) # set to parent scope
+    set(MY_FLAG OFF PARENT_SCOPE)
   else()
-    set(MY_FLAG ON)
+    set(MY_FLAG ON PARENT_SCOPE)
   endif()
 endmacro()
 

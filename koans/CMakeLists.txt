@@ -1,7 +1,7 @@
 # CMake is available at http://cmake.org/
 cmake_minimum_required(VERSION 3.3)
 
-project(CMakeKoans VERSION 0.1)
+project(CMakeKoans VERSION 1.0)
 
 # Set up from where we may load the custom CMake scripts used for defining koans
 list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/__scripts__")

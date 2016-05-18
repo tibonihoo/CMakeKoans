@@ -1,6 +1,6 @@
 
 add_executable(simple_cat simple_cat.cpp)
-target_compile_definitions(simple_cat PRIVATE HEADER_SYMBOL="!") # replace PRIVATE by INTERFACE
+target_compile_definitions(simple_cat INTERFACE HEADER_SYMBOL="!")
 
 
 get_target_property(DEFINES simple_cat COMPILE_DEFINITIONS)

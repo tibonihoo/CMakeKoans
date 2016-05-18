@@ -1,6 +1,6 @@
 
 add_library(pretty_fication STATIC src/prettify.cpp)
-target_include_directories(pretty_fication PUBLIC inc) # replace PUBLIC by INTERFACE
+target_include_directories(pretty_fication INTERFACE inc)
 
 get_target_property(INCLUDES pretty_fication INCLUDE_DIRECTORIES)
 string(REGEX MATCH "inc" INCLUDES_MATCH "${INCLUDES}")
