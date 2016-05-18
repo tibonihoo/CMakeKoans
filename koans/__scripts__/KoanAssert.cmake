@@ -5,11 +5,10 @@ set_property(GLOBAL PROPERTY KOANS_DONE  "")
 ## Otherwise increment the number of done koans.
 ##
 ## Usage:
-##   koan_assert("Do or do not there is no try" expected_value tested_value)
+##   koan_assert_equal(expected_value tested_value MASTER_SAYS "Do or do not there is no try")
 ##
-function(koan_assert NAME EXPECTED TESTED)
+function(koan_assert_equal EXPECTED TESTED MASTER_SAYS DESCRIPTION)
   get_property(DONE_SO_FAR GLOBAL PROPERTY KOANS_DONE)
-  get_property(TOTAL GLOBAL PROPERTY KOANS_TOTAL)
   if("${EXPECTED}" STREQUAL "${TESTED}")
     list(APPEND DONE_SO_FAR "${NAME}")
     set_property(GLOBAL PROPERTY KOANS_DONE ${DONE_SO_FAR})
@@ -21,7 +20,7 @@ function(koan_assert NAME EXPECTED TESTED)
     *****************************************************************************\n\
     *****************************************************************************\n\n\
     Master says you should meditate on:\n\n\
-    ${NAME}\n\n\
+    ${DESCRIPTION}\n\n\
     *****************************************************************************\n\
     *****************************************************************************\n\
     *****************************************************************************")
