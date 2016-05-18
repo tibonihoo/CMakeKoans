@@ -15,6 +15,15 @@ function(koan_assert NAME EXPECTED TESTED)
     set_property(GLOBAL PROPERTY KOANS_DONE ${DONE_SO_FAR})
   else()
     message(STATUS "${DONE_SO_FAR} koans completed.")
-    message(FATAL_ERROR "Master says you should meditate on ${NAME}")
+    message(FATAL_ERROR 
+    "\
+    *****************************************************************************\n\
+    *****************************************************************************\n\
+    *****************************************************************************\n\n\
+    Master says you should meditate on:\n\n\
+    ${NAME}\n\n\
+    *****************************************************************************\n\
+    *****************************************************************************\n\
+    *****************************************************************************")
   endif()
 endfunction()
