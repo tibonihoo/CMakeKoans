@@ -13,9 +13,9 @@ get_target_property(SRC simple_cat SOURCES)
 koan_assert_equal("simple_cat.cpp" "${SRC}"
   MASTER_SAYS "The sources should be provided as relative path whenever possible for easier maintenance of the configuration.")
 
-# The sources needs a compile-time definition for HEADER_SYMBOL
-target_compile_definitions(simple_cat PRIVATE HEADER_SYMBOL)
+# The sources needs a compile-time definition for PRETTY_SYMBOL
+target_compile_definitions(simple_cat PRIVATE PRETTY_SYMBOL)
 
 get_target_property(DEFINES simple_cat COMPILE_DEFINITIONS)
-koan_assert_equal("HEADER_SYMBOL=\"!\"" "${DEFINES}"
+koan_assert_equal("PRETTY_SYMBOL=\"!\"" "${DEFINES}"
   MASTER_SAYS "Correctly setting compile-time defininitions for a specific target is key to building it correctly.")

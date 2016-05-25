@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
 	for(int i=0; i<3; ++i)
 	{
 		for(int j=0; j<80; ++j)
-			std::cout << HEADER_SYMBOL;
+			std::cout << PRETTY_SYMBOL;
 		std::cout << std::endl;
 	}
   std::cout << std::endl << std::endl;
@@ -40,7 +40,7 @@ int main(int argc, char* argv[])
 	for(int i=0; i<3; ++i)
 	{
 		for(int j=0; j<80; ++j)
-			std::cout << HEADER_SYMBOL;
+			std::cout << PRETTY_SYMBOL;
 		std::cout << std::endl;
 	}
   std::cout << std::endl << std::endl;
