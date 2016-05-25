@@ -1,10 +1,16 @@
 
 set(MY_FLAG ON)
 
-
 add_subdirectory(nested)
-koan_assert_equal("" "${VAR_IN_NESTED}"
-  MASTER_SAYS "Variables set from sub-directories are not accessible by parents and siblings")
+
+if(DEFINED VAR_IN_NESTED)
+  set(NESTED_VAR_LEAKED TRUE)
+else()
+  set(NESTED_VAR_LEAKED FALSE)
+endif()  
+koan_assert_equal("FALSE" "${NESTED_VAR_LEAKED}"
+  MASTER_SAYS "Variables set from sub-directories are not accessible by parents and siblings unless explicitely asked to")
+
 
 
 function(change_flag_func)
