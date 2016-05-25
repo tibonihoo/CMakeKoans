@@ -1,5 +1,5 @@
 
-add_executable(simple_cat simple_cat.cpp)
+add_executable(simple_cat)
 
 if(TARGET simple_cat)
   set(SIMPLE_CAT_TARGET_DEFINED TRUE)
