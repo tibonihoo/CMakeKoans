@@ -33,9 +33,15 @@ int main(int argc, char* argv[])
   if (num_koans_completed == 0)
   {
     std::cerr << std::endl << std::endl;
-    std::cerr << "All but one koans completed so far." << std::endl << std::endl;
-    std::cerr << "Master says you should medidate String and list are two faces of each variable in CMake but they behave differently." << std::endl;
-    std::cerr << std::endl << std::endl;
+    std::cerr << "All but one koan completed so far." << std::endl << std::endl;
+    std::cerr << "*****************************************************************************" << std::endl;
+    std::cerr << "*****************************************************************************" << std::endl;
+    std::cerr << "*****************************************************************************" << std::endl << std::endl;
+    std::cerr << "Master says you should meditate on:" << std::endl << std::endl;
+    std::cerr << "String and list are two faces of each variable in CMake but they behave differently." << std::endl << std::endl;
+    std::cerr << "*****************************************************************************" << std::endl;
+    std::cerr << "*****************************************************************************" << std::endl;
+    std::cerr << "*****************************************************************************" << std::endl << std::endl;
     print_usage(argv[0]);
     return -10;
   }

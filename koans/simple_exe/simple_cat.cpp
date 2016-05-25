@@ -23,18 +23,19 @@ int main(int argc, char* argv[])
 	}
 
 	// Display "header" decoration
+	std::cout << std::endl << std::endl;
 	for(int i=0; i<3; ++i)
 	{
 		for(int j=0; j<80; ++j)
 			std::cout << HEADER_SYMBOL;
 		std::cout << std::endl;
 	}
-  std::cout << std::endl;
+  std::cout << std::endl << std::endl;
 
 	// Display the content of the input file
 	input >> std::cout.rdbuf();
   
-    std::cout << std::endl;
+  std::cout << std::endl << std::endl;
 	// Display "header" decoration as a footer too :)
 	for(int i=0; i<3; ++i)
 	{
@@ -42,6 +43,7 @@ int main(int argc, char* argv[])
 			std::cout << HEADER_SYMBOL;
 		std::cout << std::endl;
 	}
+  std::cout << std::endl << std::endl;
   
   return 0;
 }
