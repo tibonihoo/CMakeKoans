@@ -30,7 +30,7 @@ koan_assert_equal("<FILL WITH CORRECT VALUE>" "${CPP_SOURCE_FOUND_IN_OUTPUT}"
   MASTER_SAYS "Generated files are produced at configuration time.")
 
 add_executable(summarize_koans "${CMAKE_CURRENT_BINARY_DIR}/summarize_koans.cpp")
-target_link_libraries(summarize_koans PUBLIC pretty_fication)
+target_link_libraries(summarize_koans INTERFACE pretty_fication)
 
 get_target_property(DEPS summarize_koans LINK_LIBRARIES)
 koan_assert_equal("pretty_fication" "${DEPS}"
